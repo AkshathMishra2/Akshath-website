@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #2980b9;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #21618c;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        #projects h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .project-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .project-item {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project-item:hover {
+            transform: scale(1.05);
+        }
+
+        .project-item img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .project-card {
+            padding: 15px;
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .more-info {
+            display: none;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .show-more-btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            margin-top: 10px;
+        }
+
+        .show-more-btn:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Projects</h1>
+        <p>A showcase of what I've built so far!</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+    </nav>
+    <div class="container">
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-gallery">
+                <!-- First Project -->
+                <div class="project-item">
+                    <img src="images/interest_calculator_screenshot.jpg" alt="Simple Interest Calculator" />
+                    <div class="project-card">
+                        <h3>My Favourite Project</h3>
+                        <p>A Simple Interest Calculator that I coded to help calculate interest easily and quickly.</p>
+                        <div class="more-info">
+                            <p>This was my first interactive project, and it features smooth animations, user input validation, and instant results. The reason it is my favourite project is because it was my first project that had been made using ":hover", which, I think for me being 10 years old, was a good addition.</p>
+                        </div>
+                        <button class="show-more-btn" onclick="toggleDetails(this)">Show More</button>
+                    </div>
+                </div>
+
+                <!-- Second Project -->
+                <div class="project-item">
+                    <img src="images/first_game.jpg" alt="Project 2" />
+                    <div class="project-card">
+                        <h3>Second Project</h3>
+                        <p>My first game made using python.</p>
+                        <div class="more-info">
+                            <p>This project of mine was made using python. I watched some simple videos on how to add AI bots to your project. I, then ussed the library "turtle", and made a racing game. I also added obstacles, and used the simple AI logic to the computer, so the computer turtles can also race while avoiding obstacles. For me, for my first game in python, this was a good project, even if this was not done by me alone.</p>
+                        </div>
+                        <button class="show-more-btn" onclick="toggleDetails(this)">Show More</button>
+                    </div>
+                </div>
+
+                <!-- Third Project -->
+                <div class="project-item">
+                    <img src="images/line_follower.jpg" alt="Line Follower Robot" />
+                    <div class="project-card">
+                        <h3>Line Follower Robot</h3>
+                        <p>A robot that follows a path using sensors.</p>
+                        <div class="more-info">
+                            <p>This project taught me a lot about robotics. The robot uses infrared sensors to detect and follow lines drawn on the ground. This was for my project at my previous school in Thane. It constantly moved left and right, allowing it to easily detect a turn, making it way faster. Although I didn't get selected, It was a good effort from my side.</p>
+                        </div>
+                        <button class="show-more-btn" onclick="toggleDetails(this)">Show More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function toggleDetails(button) {
+            const moreInfo = button.previousElementSibling;
+            if (moreInfo.style.display === "block") {
+                moreInfo.style.display = "none";
+                button.textContent = "Show More";
+            } else {
+                moreInfo.style.display = "block";
+                button.textContent = "Show Less";
+            }
+        }
+    </script>
+</body>
+</html>
